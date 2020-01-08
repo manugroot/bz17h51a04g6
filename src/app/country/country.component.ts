@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-country',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./country.component.css']
 })
 export class CountryComponent implements OnInit {
-
-  constructor() { }
+  countries;
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.getContries().subscribe(d => {this.countries = d;})
   }
 
 }
