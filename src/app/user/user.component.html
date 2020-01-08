@@ -1,1 +1,18 @@
-<p>user works!</p>
+      <div class="container mt-5">
+        <table class="table ">
+        <thead>
+        <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Company Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let u of users">
+        <td>{{u.name}} </td>
+        <td>{{u.username}}</td>
+        <td>{{u.company.name}}</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>

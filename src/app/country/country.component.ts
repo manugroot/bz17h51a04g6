@@ -11,7 +11,9 @@ export class CountryComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit() {
-    this.data.getContries().subscribe(d => {this.countries = d;})
+    this.data.getContries().subscribe(d => {
+      this.countries = d;
+    })
   }
 
 }
